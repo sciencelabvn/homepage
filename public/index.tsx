@@ -4,14 +4,12 @@ import {
   Route,
   Router,
   hydrate,
-  lazy,
   prerender as ssr,
 } from "preact-iso"
-import Header from "./header.js"
-import NotFound from "./pages/_404.js"
-import Home from "./pages/home/index.js"
-
-const About = lazy(() => import("./pages/about/index.js"))
+import Header from "./header.tsx"
+import NotFound from "./pages/_404.tsx"
+import About from "./pages/about"
+import Home from "./pages/home"
 
 export function App() {
   return (

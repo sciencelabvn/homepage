@@ -4,8 +4,8 @@
     "start": "wmr",
     "build": "wmr build --prerender",
     "serve": "wmr serve",
-    "check-format": "yarn prettier --log-level warn --check \"**/*.{jsx,js,html,css,json}\"",
-    "format": "yarn prettier --log-level warn --write \"**/*.{jsx,js,html,css,json}\""
+    "check-format": "yarn prettier --log-level warn --check \"**/*.{tsx,jsx,js,html,css,json}\"",
+    "format": "yarn prettier --log-level warn --write \"**/*.{tsx,jsx,js,html,css,json}\""
   },
   "eslintConfig": {
     "extends": "preact"

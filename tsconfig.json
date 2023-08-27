@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
     "jsx": "preserve",
     "jsxFactory": "preact.h",
     "jsxFragmentFactory": "preact.Fragment",
