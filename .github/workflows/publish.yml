@@ -18,12 +18,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+          cache: "yarn"
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Check format
+        run: yarn check-format
+      - name: Build
+        run: yarn build
       - name: Publish
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CF_PAGE_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: ${{ vars.CF_PAGE_PROJECT_NAME }}
-          directory: public
+          directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: "3"

@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "wmr",
+    "build": "wmr build --prerender",
+    "serve": "wmr serve",
+    "check-format": "yarn prettier --log-level warn --check \"**/*.{jsx,js,html,css,json}\"",
+    "format": "yarn prettier --log-level warn --write \"**/*.{jsx,js,html,css,json}\""
+  },
+  "eslintConfig": {
+    "extends": "preact"
+  },
+  "dependencies": {
+    "eslint": "^8.48.0",
+    "eslint-config-preact": "^1.3.0",
+    "preact": "^10.17.1",
+    "preact-iso": "^2.3.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.2",
+    "wmr": "^3.8.0"
+  }
+}
