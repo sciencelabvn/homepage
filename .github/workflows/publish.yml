@@ -24,7 +24,7 @@ jobs:
           node-version: "18.x"
           cache: "yarn"
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable --immutable-cache --check-cache
       - name: Lint
         run: yarn ci:lint
       - name: Build
