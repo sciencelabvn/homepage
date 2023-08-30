@@ -32,9 +32,9 @@ jobs:
       - name: Publish
         uses: cloudflare/pages-action@v1
         with:
-          apiToken: ${{ secrets.CF_PAGE_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          projectName: ${{ vars.CF_PAGE_PROJECT_NAME }}
+          apiToken: ${{ secrets.CLOUDFLARE_PAGE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ vars.CLOUDFLARE_PAGE_PROJECT_NAME }}
           directory: dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: "3"
